@@ -1,0 +1,52 @@
+@mixin box-shadow-menu($top, $left, $blur, $color) {
+ 	-webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+}
+@mixin padding-side-menu($top, $bottom){
+	padding-top: $top;
+	padding-bottom: $bottom;
+}
+
+//buttons
+@mixin border-radius-pagination($radius) {
+	border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+}
+@mixin border-radius-l($radius) {
+	border-bottom-left-radius: $radius;
+	-webkit-border-bottom-left-radius: $radius;
+	-moz-border-bottom-left-radius: $radius;
+    border-top-left-radius: $radius;
+    -webkit-top-left-radius: $radius;
+	-moz-border-top-left-radius: $radius;
+}
+@mixin border-radius-r($radius) {
+	border-bottom-right-radius: $radius;
+	-webkit-border-bottom-right-radius: $radius;
+	-moz-border-bottom-right-radius: $radius;
+    border-top-right-radius: $radius;
+    -webkit-top-right-radius: $radius;
+	-moz-border-top-right-radius: $radius;
+} 
+
+@mixin btn-table($position, $top, $color) {
+	position: $position;
+	top: $top;
+	a{
+		color: $color;
+	}
+}
+
+//titles
+
+@mixin title-content($top, $bottom, $fontS){
+	margin-top: $top;
+    margin-bottom: $bottom;
+    font-size: $fontS;
+}
+@mixin position-truck($left, $top){
+		left: $left;
+        top:  $top;
+}

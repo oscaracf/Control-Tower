@@ -1,0 +1,299 @@
+//General
+.tables-content{
+    width: 100%;
+    margin: 0 auto;
+    h1.t-message{
+       @include  title-content(20px, 40px, 24px);
+    }
+    h1.t-document{
+       @include  title-content(100px, 40px, 24px);
+    }
+     h1.t-history{
+       @include  title-content(20px, 40px, 24px);
+    }
+    .document{
+        margin-bottom: 75px;
+        margin-top:  20px;
+        th{
+            font-size: 20px;
+            @media screen and (max-width: 1024px) {
+                 font-size: 12px;
+            }
+        }
+        td{
+            font-size: 18px !important;
+            @media screen and (max-width: 1024px) {
+                 font-size: 12px !important;
+            }
+        }
+    }
+    th{
+        text-align: center;
+    }
+     .dataTables_wrapper{
+        overflow: hidden;
+        .row{
+            &:nth-child(1){
+                display: none;
+            }
+            &:nth-child(2){
+                    overflow: hidden;
+                    overflow-x: visible;
+                    table.table-overview{
+                        a{
+                            color: $text-gray;
+                            text-decoration: none;
+                        }
+                        min-width: 1100px;
+                        @media screen and (max-width: 1024px) {
+                            min-width: 1080px;
+                        }
+                        width: 100% !important;
+                    }
+            }
+            &:nth-child(2){
+                    table.pagination-message{
+                        min-width: 100%;
+                            @media screen and (max-width: 1024px) {
+                                min-width: 100%;
+                            }
+                    }
+            }
+             &:nth-child(2){
+                    table.pagination-history{
+                        th{
+                            text-align: center;
+                        }
+                            min-width: 1500px;
+                                @media screen and (max-width: 1024px) {
+                                   min-width: 889px;
+                            }
+                    }
+            }
+            &:nth-child(2){
+                    overflow: hidden;
+                    overflow-x: visible;
+                    table.fuel-table{
+                        min-width: 100%;
+                        @media screen and (max-width: 1024px) {
+                            min-width: 660px;
+                        }
+                        width: 100% !important;
+                    }
+            }
+            &:nth-child(2){
+                    overflow: hidden;
+                    overflow-x: visible;
+                    table.state-table{
+                        min-width: 100%;
+                        @media screen and (max-width: 1024px) {
+                            min-width: 660px;
+                        }
+                        width: 100% !important;
+                    }
+            }
+             &:nth-child(2){
+                    overflow: hidden;
+                    overflow-x: visible;
+                    table.ifta-table{
+                        min-width: 100%;
+                        @media screen and (max-width: 1024px) {
+                            min-width: 1000px;
+                        }
+                        width: 100% !important;
+                    }
+            }
+            &:nth-child(3) {
+                .col-sm-5{
+                    display:  none;
+                }
+                .col-sm-7{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .border-heading{
+        border-top: 1px solid #cccccc;
+        border-bottom:1px solid #cccccc;
+    }
+     #towerTable{
+        td{
+            text-align: center;
+            padding: 20px 10px;
+            @media screen and (min-width: 1440px) {
+                font-size: 13px;
+            }
+             @media screen and (max-width: 1280px) {
+                font-size: 12px;
+            }
+        }
+    }
+
+    //Table Overview
+    .table-overview{
+        th{
+            text-align: center;
+            border: none !important;
+            padding: 14px 10px;
+            &.hos{
+                 width: 160px !important;
+            }
+        }
+    }
+    //Table Detail
+
+    //paginate
+     div.dataTables_paginate {
+         text-align: center;
+         //pagination
+         .pagination {
+            & > .active > a, 
+            & > .active > a:hover, 
+            & > .active > a:focus, 
+            & > .active > span, 
+            & > .active > span:hover, 
+            & > .active > span:focus{
+                background-color: $primary-color;
+                border-color: $primary-color;
+                color: #ffffff;
+            }
+            & > li > a, .pagination > li > span{
+                color: $secundary-color;
+            }
+            li{
+                &:nth-child(1) a{
+                    padding: 8px 16px;
+                }
+                &:last-child a{
+                    padding: 8px 16px;
+                }
+                &.paginate_button.first {
+                    @include  btn-table(absolute, 10px, #999999);
+                    left: 15px;
+                     @media screen and (max-width: 667px) {
+                         display: none;
+                    }
+                    a{
+                         @include border-radius-pagination(20px);
+                    }
+                }
+                &.paginate_button.last{
+                     @include  btn-table(absolute, 10px, #999999);
+                     right: 15px;
+                      @media screen and (max-width: 667px) {
+                         display: none;
+                    }
+                     a{
+                      @include border-radius-pagination(20px);
+                     }
+                }
+                &.paginate_button.previous{
+                    a{
+                       @include border-radius-l(4px);
+                    }
+                }
+                &.paginate_button.next{
+                    a{
+                       @include border-radius-r(4px);
+                    }
+                }
+            }  
+    //end pagination
+        }
+     }
+}
+
+
+
+.h150{
+    width: 150px;
+}
+
+.details{
+    .tableMessageHead{
+        th{
+            text-align: left;
+            font-size: 20px;
+            padding: 22px 0px;
+            border-bottom: solid 1px #ccc; 
+             @media screen and (max-width: 1280px) {
+                font-size: 13px;
+            }
+        }
+    }
+    .pagination-message{
+        .tableMessageHead{
+            th{
+                 padding: 22px 22px;
+            }
+        }
+    }
+    #towerTable.tableMessage{
+        td:first-child{
+            width: 20%;
+        }
+        tr{
+             @media screen and (max-width: 667px) {
+                font-size:  100%;
+            }
+        }
+        td{
+            text-align:  left;
+            vertical-align: middle;
+            font-size: 18px;
+            padding: 31px 20px;
+            border-top: none;
+            border-bottom: solid 1px #ccc;
+            @media screen and (max-width: 1024px) {
+                    font-size: 15px;
+                    padding: 15px 10px;
+            }
+             @media screen and (max-width: 667px) {
+                font-size: 12px;
+            }
+        }
+        td:last-child{
+            border: none;
+            text-align: right;
+            padding: 0px;
+        }
+    }
+    .btn-default{
+        background-image: none;
+        font-size: 18px;
+        padding: 8px 17px;
+        margin-left: 21px; 
+         @media screen and (max-width: 667px) {
+               font-size: 13px;
+                padding: 5px 17px;
+                margin-left: 0px;
+        } 
+    }
+}
+.pagination-document{
+    a{
+        color: $text-gray;
+        &:hover{
+            color: $primary-color;
+            text-decoration: none;
+        }
+    }
+    .tableMessageHead{
+        th{
+            text-align: center;
+               
+            @media screen and (max-width: 667px) {
+                 font-size: 14px;
+             }
+        } 
+    }
+    @media screen and (max-width: 667px) {
+        min-width: 100% !important;
+            }
+}
+.no-border{
+    td{
+        border: none !important;
+    }
+}
